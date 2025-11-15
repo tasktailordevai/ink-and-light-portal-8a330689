@@ -63,6 +63,7 @@ export default {
           bg: "hsl(var(--v2-bg))",
           surface: "hsl(var(--v2-surface))",
           panel: "hsl(var(--v2-panel))",
+          "gray-0": "hsl(var(--v2-gray-0))",
           "gray-1": "hsl(var(--v2-gray-1))",
           "gray-2": "hsl(var(--v2-gray-2))",
           "gray-3": "hsl(var(--v2-gray-3))",
