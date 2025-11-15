@@ -12,6 +12,17 @@ import Insights from "./pages/Insights";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+
+// V2 Routes
+import IndexV2 from "./pages/v2/Index";
+import AboutV2 from "./pages/v2/About";
+import TeamV2 from "./pages/v2/Team";
+import PracticeAreasV2 from "./pages/v2/PracticeAreas";
+import CaseStudiesV2 from "./pages/v2/CaseStudies";
+import InsightsV2 from "./pages/v2/Insights";
+import ContactV2 from "./pages/v2/Contact";
+
+// Admin Routes
 import AdminLogin from "./backend/AdminLogin";
 import AdminLayout from "./backend/AdminLayout";
 import Dashboard from "./backend/Dashboard";
@@ -40,6 +51,15 @@ const App = () => (
           <Route path="/insights" element={<Insights />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* V2 Routes - Curvy & Colorful Design */}
+          <Route path="/v2" element={<IndexV2 />} />
+          <Route path="/v2/about" element={<AboutV2 />} />
+          <Route path="/v2/team" element={<TeamV2 />} />
+          <Route path="/v2/practice-areas" element={<PracticeAreasV2 />} />
+          <Route path="/v2/case-studies" element={<CaseStudiesV2 />} />
+          <Route path="/v2/insights" element={<InsightsV2 />} />
+          <Route path="/v2/contact" element={<ContactV2 />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />

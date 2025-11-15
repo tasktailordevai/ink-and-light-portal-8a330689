@@ -54,6 +54,41 @@ All colors MUST be HSL.
     --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.15s ease-out;
 
+    /* V2 Colorful Palette */
+    --v2-accent: 221 71% 43%;        /* #2541B2 Deep Blue */
+    --v2-accent-alt: 45 100% 50%;    /* #FDC500 Gold */
+    --v2-accent-soft: 214 100% 94%;  /* #E1EFFF Pale Blue */
+    --v2-bg: 220 40% 98%;            /* #F8F9FB Soft Off-White */
+    --v2-surface: 214 32% 95%;       /* #F1F5F9 Light Slate */
+    --v2-panel: 0 0% 100%;           /* #FFFFFF */
+    
+    /* V2 Gray Scale */
+    --v2-gray-1: 220 14% 96%;        /* #F3F4F6 */
+    --v2-gray-2: 220 13% 91%;        /* #E5E7EB */
+    --v2-gray-3: 214 14% 83%;        /* #D1D5DB */
+    --v2-gray-4: 215 14% 51%;        /* #6B7280 */
+    
+    /* V2 Text */
+    --v2-text-main: 222 47% 16%;     /* #212936 */
+    --v2-text-headline: 0 0% 10%;    /* #1A1A1A */
+    --v2-text-light: 215 14% 51%;    /* #6B7280 */
+    --v2-text-inverse: 0 0% 100%;    /* #FFFFFF */
+    
+    /* V2 Danger */
+    --v2-danger: 355 68% 48%;        /* #CC2936 */
+    
+    /* V2 Shadows */
+    --v2-shadow-accent: 0 8px 32px rgba(37, 65, 178, 0.08);
+    --v2-shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --v2-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --v2-shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.12);
+    
+    /* V2 Radius */
+    --v2-radius-sm: 0.75rem;    /* 12px */
+    --v2-radius-md: 1rem;       /* 16px */
+    --v2-radius-lg: 1.5rem;     /* 24px */
+    --v2-radius-xl: 2rem;       /* 32px */
+
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
