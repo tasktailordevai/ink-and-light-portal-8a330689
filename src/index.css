@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Monochrome Palette - Black & White Only */
-    --background: 0 0% 100%;
+    --background: 37 40% 89%;
     --foreground: 0 0% 4%;
     
     --ink: 0 0% 4%;
