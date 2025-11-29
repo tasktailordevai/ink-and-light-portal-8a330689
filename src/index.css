@@ -9,7 +9,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Monochrome Palette - Black & White Only */
-    --background: 37 40% 89%;
+    /* --background: 37 40% 89%; */
+    --background: 0 0% 98%;
     --foreground: 0 0% 4%;
     
     --ink: 0 0% 4%;
@@ -190,6 +191,109 @@ All colors MUST be HSL.
   
   .hover-lift {
     @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+  
+  .libertinus-mono-regular {
+    font-family: "Libertinus Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .courier-prime-regular {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .courier-prime-bold {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .courier-prime-regular-italic {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .courier-prime-bold-italic {
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  /* V3 Theme - Only applies to v3 routes */
+  .v3-theme {
+    --background: 38 45% 91%; /* #F3EBDD */
+    --panel: 37 73% 87%; /* #F6E4C7 */
+    --card: 37 73% 87%; /* #F6E4C7 */
+    --popover: 37 73% 87%; /* #F6E4C7 */
+    --secondary: 37 73% 87%; /* #F6E4C7 */
+    --muted: 37 73% 87%; /* #F6E4C7 */
+    background: #F3EBDD;
+    position: relative;
+    min-height: 100vh;
+    font-family: "Courier Prime", monospace;
+    isolation: isolate;
+  }
+  
+  .v3-theme > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .v3-theme::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.02) 0px,
+        rgba(0,0,0,0.02) 1px,
+        transparent 1px,
+        transparent 2px
+      );
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .v3-theme::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(rgba(0,0,0,0.08) 1px, transparent 1px) 0 0 / 3px 3px;
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+  
+  .v3-theme h1,
+  .v3-theme h2,
+  .v3-theme h3,
+  .v3-theme h4,
+  .v3-theme h5,
+  .v3-theme h6,
+  .v3-theme p,
+  .v3-theme span,
+  .v3-theme div,
+  .v3-theme a,
+  .v3-theme button,
+  .v3-theme input,
+  .v3-theme textarea,
+  .v3-theme label {
+    font-family: "Courier Prime", monospace;
   }
 }
 

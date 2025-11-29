@@ -22,6 +22,16 @@ import CaseStudiesV2 from "./pages/v2/CaseStudies";
 import InsightsV2 from "./pages/v2/Insights";
 import ContactV2 from "./pages/v2/Contact";
 
+// V3 Routes
+import IndexV3 from "./pages/v3/Index";
+import AboutV3 from "./pages/v3/About";
+import TeamV3 from "./pages/v3/Team";
+import PracticeAreasV3 from "./pages/v3/PracticeAreas";
+import PracticeAreaDetailV3 from "./pages/v3/PracticeAreaDetail";
+import CaseStudiesV3 from "./pages/v3/CaseStudies";
+import InsightsV3 from "./pages/v3/Insights";
+import ContactV3 from "./pages/v3/Contact";
+
 // Admin Routes
 import AdminLogin from "./backend/AdminLogin";
 import AdminLayout from "./backend/AdminLayout";
@@ -60,6 +70,16 @@ const App = () => (
           <Route path="/v2/case-studies" element={<CaseStudiesV2 />} />
           <Route path="/v2/insights" element={<InsightsV2 />} />
           <Route path="/v2/contact" element={<ContactV2 />} />
+          
+          {/* V3 Routes - Strategic Legal Counsel Design */}
+          <Route path="/v3" element={<IndexV3 />} />
+          <Route path="/v3/about" element={<AboutV3 />} />
+          <Route path="/v3/team" element={<TeamV3 />} />
+          <Route path="/v3/practice-areas" element={<PracticeAreasV3 />} />
+          <Route path="/v3/practice-areas/:slug" element={<PracticeAreaDetailV3 />} />
+          <Route path="/v3/case-studies" element={<CaseStudiesV3 />} />
+          <Route path="/v3/insights" element={<InsightsV3 />} />
+          <Route path="/v3/contact" element={<ContactV3 />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />
