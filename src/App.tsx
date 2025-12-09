@@ -32,6 +32,16 @@ import CaseStudiesV3 from "./pages/v3/CaseStudies";
 import InsightsV3 from "./pages/v3/Insights";
 import ContactV3 from "./pages/v3/Contact";
 
+// V4 Routes
+import IndexV4 from "./pages/v4/Index";
+import AboutV4 from "./pages/v4/About";
+import TeamV4 from "./pages/v4/Team";
+import PracticeAreasV4 from "./pages/v4/PracticeAreas";
+import PracticeAreaDetailV4 from "./pages/v4/PracticeAreaDetail";
+import CaseStudiesV4 from "./pages/v4/CaseStudies";
+import InsightsV4 from "./pages/v4/Insights";
+import ContactV4 from "./pages/v4/Contact";
+
 // Admin Routes
 import AdminLogin from "./backend/AdminLogin";
 import AdminLayout from "./backend/AdminLayout";
@@ -80,6 +90,16 @@ const App = () => (
           <Route path="/v3/case-studies" element={<CaseStudiesV3 />} />
           <Route path="/v3/insights" element={<InsightsV3 />} />
           <Route path="/v3/contact" element={<ContactV3 />} />
+          
+          {/* V4 Routes - Royal Blue Theme */}
+          <Route path="/v4" element={<IndexV4 />} />
+          <Route path="/v4/about" element={<AboutV4 />} />
+          <Route path="/v4/team" element={<TeamV4 />} />
+          <Route path="/v4/practice-areas" element={<PracticeAreasV4 />} />
+          <Route path="/v4/practice-areas/:slug" element={<PracticeAreaDetailV4 />} />
+          <Route path="/v4/case-studies" element={<CaseStudiesV4 />} />
+          <Route path="/v4/insights" element={<InsightsV4 />} />
+          <Route path="/v4/contact" element={<ContactV4 />} />
           
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLogin />} />

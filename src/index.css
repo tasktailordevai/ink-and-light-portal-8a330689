@@ -295,6 +295,203 @@ All colors MUST be HSL.
   .v3-theme label {
     font-family: "Courier Prime", monospace;
   }
+  
+  /* V4 Theme - Blue Cards & Light Beige Background */
+  .v4-theme {
+    --background: 60 14% 96%; /* Light beige #f4f5f0 */
+    --panel: 60 14% 96%; /* Light beige #f4f5f0 */
+    --card: 220 100% 20%; /* Blue #002366 for cards */
+    --popover: 60 14% 96%;
+    --secondary: 60 14% 96%;
+    --muted: 60 14% 96%;
+    --primary: 220 100% 20%; /* Blue #002366 */
+    --primary-foreground: 0 0% 100%; /* White text */
+    --accent: 220 100% 20%; /* Blue #002366 */
+    --accent-foreground: 0 0% 100%; /* White text */
+    --foreground: 0 0% 4%; /* Dark text for light background */
+    --ink: 0 0% 4%; /* Dark text */
+    --ink-2: 0 0% 10%; /* Slightly lighter dark text */
+    background: #f4f5f0; /* Light beige background */
+    position: relative;
+    min-height: 100vh;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    isolation: isolate;
+    color: #000000; /* Dark text on light background */
+  }
+  
+  .v4-theme > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Elegant serif for headings */
+  .v4-theme h1,
+  .v4-theme h2,
+  .v4-theme h3,
+  .v4-theme h4,
+  .v4-theme h5,
+  .v4-theme h6 {
+    font-family: "Playfair Display", "Cormorant Garamond", "Libre Baskerville", "Georgia", serif;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  /* Inter for body text */
+  .v4-theme p,
+  .v4-theme span,
+  .v4-theme div,
+  .v4-theme a,
+  .v4-theme button,
+  .v4-theme input,
+  .v4-theme textarea,
+  .v4-theme label,
+  .v4-theme li {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #000000;
+  }
+  
+  /* BlurText with serif font override */
+  .v4-theme .blur-text-serif,
+  .v4-theme .blur-text-serif span {
+    font-family: "Playfair Display", "Cormorant Garamond", "Libre Baskerville", "Georgia", serif !important;
+  }
+  
+  /* Ensure white text for BlurText in Why Varuna section */
+  .v4-theme .blur-text-white,
+  .v4-theme .blur-text-white span,
+  .blur-text-white,
+  .blur-text-white span {
+    color: #ffffff !important;
+  }
+  
+  .v4-theme .text-ink {
+    color: #000000; /* Dark text */
+  }
+  
+  .v4-theme .text-ink-2 {
+    color: #333333; /* Slightly lighter dark text */
+  }
+  
+  .v4-theme .border-line {
+    border-color: rgba(0, 0, 0, 0.1); /* Light gray border */
+  }
+  
+  .v4-theme button[class*="bg-primary"],
+  .v4-theme .bg-primary {
+    background-color: #002366; /* Blue */
+    color: #ffffff; /* White text */
+  }
+  
+  .v4-theme button[class*="bg-primary"]:hover,
+  .v4-theme .bg-primary:hover {
+    background-color: #003380; /* Slightly lighter blue */
+    color: #ffffff;
+  }
+  
+  /* Cards should be Blue with white text */
+  .v4-theme .card,
+  .v4-theme [class*="Card"],
+  .v4-theme [class*="card"] {
+    background-color: #002366 !important; /* Blue */
+    border-color: rgba(0, 35, 102, 0.2) !important;
+    color: #ffffff !important; /* White text in cards */
+  }
+  
+  .v4-theme .card h1,
+  .v4-theme .card h2,
+  .v4-theme .card h3,
+  .v4-theme .card h4,
+  .v4-theme .card h5,
+  .v4-theme .card h6,
+  .v4-theme .card p,
+  .v4-theme .card span,
+  .v4-theme .card div,
+  .v4-theme .card a,
+  .v4-theme .card label,
+  .v4-theme [class*="Card"] h1,
+  .v4-theme [class*="Card"] h2,
+  .v4-theme [class*="Card"] h3,
+  .v4-theme [class*="Card"] h4,
+  .v4-theme [class*="Card"] h5,
+  .v4-theme [class*="Card"] h6,
+  .v4-theme [class*="Card"] p,
+  .v4-theme [class*="Card"] span,
+  .v4-theme [class*="Card"] div,
+  .v4-theme [class*="Card"] a,
+  .v4-theme [class*="Card"] label,
+  .v4-theme [class*="card"] h1,
+  .v4-theme [class*="card"] h2,
+  .v4-theme [class*="card"] h3,
+  .v4-theme [class*="card"] h4,
+  .v4-theme [class*="card"] h5,
+  .v4-theme [class*="card"] h6,
+  .v4-theme [class*="card"] p,
+  .v4-theme [class*="card"] span,
+  .v4-theme [class*="card"] div,
+  .v4-theme [class*="card"] a,
+  .v4-theme [class*="card"] label {
+    color: #ffffff !important; /* White text in cards */
+  }
+  
+  /* Ensure CardContent and CardHeader also have white text */
+  .v4-theme [class*="CardContent"],
+  .v4-theme [class*="CardHeader"],
+  .v4-theme [class*="CardTitle"],
+  .v4-theme [class*="card-content"],
+  .v4-theme [class*="card-header"],
+  .v4-theme [class*="card-title"] {
+    color: #ffffff !important;
+  }
+  
+  .v4-theme [class*="CardContent"] *,
+  .v4-theme [class*="CardHeader"] *,
+  .v4-theme [class*="card-content"] *,
+  .v4-theme [class*="card-header"] * {
+    color: #ffffff !important;
+  }
+  
+  /* Badges inside cards - blue background, white text, white outline */
+  .v4-theme .card [class*="badge"],
+  .v4-theme [class*="Card"] [class*="badge"],
+  .v4-theme [class*="card"] [class*="badge"],
+  .v4-theme [class*="CardContent"] [class*="badge"],
+  .v4-theme [class*="CardHeader"] [class*="badge"],
+  .v4-theme .card [class*="Badge"],
+  .v4-theme [class*="Card"] [class*="Badge"],
+  .v4-theme [class*="card"] [class*="Badge"],
+  .v4-theme [class*="CardContent"] [class*="Badge"],
+  .v4-theme [class*="CardHeader"] [class*="Badge"] {
+    background-color: #002366 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+  }
+  
+  /* Secondary badges - blue background, white text, white outline */
+  .v4-theme .card .bg-secondary,
+  .v4-theme [class*="Card"] .bg-secondary,
+  .v4-theme .card [class*="secondary"],
+  .v4-theme [class*="Card"] [class*="secondary"] {
+    background-color: #002366 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+  }
+  
+  /* Outline badges - blue background, white text, white outline */
+  .v4-theme .card [class*="outline"],
+  .v4-theme [class*="Card"] [class*="outline"] {
+    background-color: #002366 !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+  }
+  
+  /* Background sections */
+  .v4-theme .bg-background {
+    background-color: #f4f5f0 !important; /* Light beige */
+  }
+  
+  .v4-theme .bg-panel {
+    background-color: #f4f5f0 !important; /* Light beige */
+  }
 }
 
 @media print {
