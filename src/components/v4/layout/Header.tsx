@@ -18,21 +18,22 @@ export const Header = () => {
 
   return (
     <header 
-      className="sticky top-0 z-50 backdrop-blur-sm border-b border-line"
-      style={{ backgroundColor: "#f4f5f0" }}
+      className="sticky top-0 z-50 backdrop-blur-sm border-b"
+      style={{ backgroundColor: "#002366", borderColor: "rgba(255, 255, 255, 0.2)" }}
     >
       <nav className="mono-container py-4 flex items-center justify-between" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link to="/v4" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <Scale className="h-6 w-6 text-foreground" />
-            <span className="font-serif text-2xl tracking-tight font-semibold text-foreground">Varuna Law</span>
+            <Scale className="h-6 w-6" style={{ color: "#ffffff" }} />
+            <span className="font-serif text-2xl tracking-tight font-semibold" style={{ color: "#ffffff" }}>Varuna Law</span>
           </Link>
         </div>
 
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+            style={{ color: "#ffffff" }}
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -45,7 +46,10 @@ export const Header = () => {
             <Link
               key={item.name}
               to={item.href}
-              className="text-sm font-medium leading-6 text-foreground hover:text-ink-2 transition-colors"
+              className="text-sm font-medium leading-6 transition-colors"
+              style={{ color: "#ffffff" }}
+              onMouseEnter={(e) => e.currentTarget.style.color = "#e0e0e0"}
+              onMouseLeave={(e) => e.currentTarget.style.color = "#ffffff"}
             >
               {item.name}
             </Link>
@@ -53,7 +57,7 @@ export const Header = () => {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button asChild variant="default" size="sm" style={{ backgroundColor: "#002366", color: "#ffffff" }}>
+          <Button asChild variant="default" size="sm" style={{ backgroundColor: "#002366", color: "#ffffff", border: "1px solid #ffffff" }}>
             <Link to="/v4/contact">Book Consultation</Link>
           </Button>
         </div>
@@ -63,15 +67,16 @@ export const Header = () => {
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-50">
           <div className="fixed inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-line">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1" style={{ backgroundColor: "#002366", borderColor: "rgba(255, 255, 255, 0.2)" }}>
             <div className="flex items-center justify-between">
               <Link to="/v4" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
-                <Scale className="h-5 w-5 text-foreground" />
-                <span className="font-serif text-xl tracking-tight font-semibold text-foreground">Varuna Law</span>
+                <Scale className="h-5 w-5" style={{ color: "#ffffff" }} />
+                <span className="font-serif text-xl tracking-tight font-semibold" style={{ color: "#ffffff" }}>Varuna Law</span>
               </Link>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-foreground"
+                className="-m-2.5 rounded-md p-2.5"
+                style={{ color: "#ffffff" }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -85,7 +90,10 @@ export const Header = () => {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-foreground hover:bg-panel"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 transition-colors"
+                      style={{ color: "#ffffff" }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)"}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -93,7 +101,7 @@ export const Header = () => {
                   ))}
                 </div>
                 <div className="py-6">
-                  <Button asChild variant="default" className="w-full" style={{ backgroundColor: "#002366", color: "#ffffff" }}>
+                  <Button asChild variant="default" className="w-full" style={{ backgroundColor: "#002366", color: "#ffffff", border: "1px solid #ffffff" }}>
                     <Link to="/v4/contact" onClick={() => setMobileMenuOpen(false)}>
                       Book Consultation
                     </Link>
